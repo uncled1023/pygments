@@ -49,10 +49,19 @@ namespace FearTheCowboy.Pygments {
                 }
                 return null;
             };
+
+            // Load Pygments into memory
+            LoadPygments();
         }
 
-        public Highlighter() {
-            if (_highlight == null) {
+        public Highlighter()
+        {
+        }
+
+        private static void LoadPygments()
+        {
+            if (_highlight == null)
+            {
                 var ipy = Python.CreateRuntime();
                 dynamic clr = ipy.GetClrModule();
                 clr.AddReference("pygments");
@@ -60,7 +69,8 @@ namespace FearTheCowboy.Pygments {
                 _lexers = ipy.Import("pygments.lexers").lexers;
                 Lexers = ((IEnumerable)_lexers.get_all_lexers()).Cast<object>().Select(each => {
                     dynamic e = each;
-                    return new Lexer {
+                    return new Lexer
+                    {
                         Name = e[0],
                         Aliases = ((IEnumerable<object>)(e[1])).Select(i => i.ToString()).ToArray(),
                         Filemasks = ((IEnumerable<object>)(e[2])).Select(i => i.ToString()).ToArray(),
