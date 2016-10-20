@@ -22,10 +22,10 @@ namespace FearTheCowboy.Pygments {
     public class Highlighter {
         public static IEnumerable<Lexer> Lexers;
         public static IEnumerable<string> Styles;
-        private dynamic _formatters;
-        private dynamic _highlight;
-        private dynamic _lexers;
-        private dynamic _styles;
+        private static dynamic _formatters;
+        private static dynamic _highlight;
+        private static dynamic _lexers;
+        private static dynamic _styles;
 
         static Highlighter() {
             // allows assemblies to be stored in the any assembly as a resource.
