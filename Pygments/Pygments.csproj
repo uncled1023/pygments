@@ -310,11 +310,61 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), solution.targets))\solution.targets" Condition="Exists('$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), solution.targets))\solution.targets')" />
   <ItemGroup>
-    <PythonRuntime Include="$(SolutionDir)packages\IronPython.2.7.5\lib\net40\*" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.Modules.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.Modules.xml" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.SQLite.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.SQLite.xml" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.Wpf.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.Wpf.xml" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\IronPython.xml" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Dynamic.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Dynamic.xml" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Scripting.AspNet.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Scripting.AspNet.xml" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Scripting.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Scripting.Metadata.dll" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Scripting.Metadata.xml" />
+    <PythonRuntime Include="C:\Users\chris\Repositories\pygments\packages\IronPython.2.7.5\lib\net40\Microsoft.Scripting.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="pygments-lib\pygments\styles\scite.py" />
-    <None Include="pygments-lib\pygments\styles\scitedark.py" />
+    <Content Include="pygments-lib\pygments\formatters\irc.py" />
+    <Content Include="pygments-lib\pygments\lexers\ampl.py" />
+    <Content Include="pygments-lib\pygments\lexers\archetype.py" />
+    <Content Include="pygments-lib\pygments\lexers\bibtex.py" />
+    <Content Include="pygments-lib\pygments\lexers\capnproto.py" />
+    <Content Include="pygments-lib\pygments\lexers\clean.py" />
+    <Content Include="pygments-lib\pygments\lexers\crystal.py" />
+    <Content Include="pygments-lib\pygments\lexers\csound.py" />
+    <Content Include="pygments-lib\pygments\lexers\elm.py" />
+    <Content Include="pygments-lib\pygments\lexers\ezhil.py" />
+    <Content Include="pygments-lib\pygments\lexers\forth.py" />
+    <Content Include="pygments-lib\pygments\lexers\grammar_notation.py" />
+    <Content Include="pygments-lib\pygments\lexers\hexdump.py" />
+    <Content Include="pygments-lib\pygments\lexers\j.py" />
+    <Content Include="pygments-lib\pygments\lexers\monte.py" />
+    <Content Include="pygments-lib\pygments\lexers\ncl.py" />
+    <Content Include="pygments-lib\pygments\lexers\oberon.py" />
+    <Content Include="pygments-lib\pygments\lexers\parasail.py" />
+    <Content Include="pygments-lib\pygments\lexers\praat.py" />
+    <Content Include="pygments-lib\pygments\lexers\qvt.py" />
+    <Content Include="pygments-lib\pygments\lexers\rnc.py" />
+    <Content Include="pygments-lib\pygments\lexers\roboconf.py" />
+    <Content Include="pygments-lib\pygments\lexers\sas.py" />
+    <Content Include="pygments-lib\pygments\lexers\smv.py" />
+    <Content Include="pygments-lib\pygments\lexers\stata.py" />
+    <Content Include="pygments-lib\pygments\lexers\supercollider.py" />
+    <Content Include="pygments-lib\pygments\lexers\trafficscript.py" />
+    <Content Include="pygments-lib\pygments\lexers\typoscript.py" />
+    <Content Include="pygments-lib\pygments\lexers\varnish.py" />
+    <Content Include="pygments-lib\pygments\lexers\verification.py" />
+    <Content Include="pygments-lib\pygments\lexers\whiley.py" />
+    <Content Include="pygments-lib\pygments\lexers\x10.py" />
+    <Content Include="pygments-lib\pygments\lexers\_csound_builtins.py" />
+    <Content Include="pygments-lib\pygments\lexers\_stata_builtins.py" />
+    <Content Include="pygments-lib\pygments\lexers\_tsql_builtins.py" />
+    <Content Include="pygments-lib\pygments\styles\sas.py" />
+    <Content Include="pygments-lib\pygments\styles\stata.py" />
   </ItemGroup>
   <Target Name="BeforeBuild" Inputs="@(None)" Outputs="$(SolutionDir)intermediate\pygments.dll">
     <MakeDir Directories="$(SolutionDir)intermediate" />

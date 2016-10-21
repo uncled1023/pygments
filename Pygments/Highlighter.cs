@@ -44,7 +44,9 @@ namespace FearTheCowboy.Pygments {
                                 }
                             }
                         }
-                    } catch {
+                    }
+                    catch (Exception ex)
+                    {
                     }
                 }
                 return null;
@@ -111,21 +113,27 @@ namespace FearTheCowboy.Pygments {
             if (!string.IsNullOrEmpty(lexerName)) {
                 try {
                     return GetLexerByName(lexerName);
-                } catch {
+                }
+                catch (Exception ex)
+                {
                 }
             }
 
             if (!string.IsNullOrEmpty(filename)) {
                 try {
                     return GetLexerForFilename(filename);
-                } catch {
+                }
+                catch (Exception ex)
+                {
                 }
             }
 
             if (!string.IsNullOrEmpty(source)) {
                 try {
                     return GuessLexer(source);
-                } catch {
+                }
+                catch (Exception ex)
+                {
                 }
             }
 
@@ -142,13 +150,48 @@ namespace FearTheCowboy.Pygments {
                 _formatters.get_formatter_by_name("rtf", style: GetStyleByName(styleName), fontface: fontFace));
         }
 
-        public string HighlightToHtml(string sourceCode, string lexerName = null, string styleName = null, string filename = null, bool fragment = false, string title = "", bool generateInlineStyles = false, string classPrefix = "",
-            string wrappingDivClass = "highlight", string wrappingDivStyles = "", string preStyles = "", LineNumberStyle lineNumberStyle = LineNumberStyle.none, int lineNumberStart = 1, bool noBackground = false, string lineBreaks = "\n",
-            string lineAnchorPrefix = null, string lineSpanPrefix = null, bool anchorLineNumbers = false, string highlightLines = "") {
+        public string HighlightToHtml(  string sourceCode, 
+                                        string lexerName = null, 
+                                        string styleName = null, 
+                                        string filename = null, 
+                                        bool fragment = false, 
+                                        string title = "", 
+                                        bool generateInlineStyles = false, 
+                                        string classPrefix = "",
+                                        string wrappingDivClass = "highlight", 
+                                        string wrappingDivStyles = "", 
+                                        string preStyles = "", 
+                                        LineNumberStyle lineNumberStyle = LineNumberStyle.none, 
+                                        int lineNumberStart = 1, 
+                                        bool noBackground = false, 
+                                        string lineBreaks = "\n",
+                                        string lineAnchorPrefix = null, 
+                                        string lineSpanPrefix = null, 
+                                        bool anchorLineNumbers = false, 
+                                        string highlightLines = ""
+                                    )
+        {
             
-            return _highlight(sourceCode, GetLexer(lexerName, sourceCode, filename), _formatters.get_formatter_by_name("html", style: GetStyleByName(styleName), full: !fragment, title: title, noclasses: generateInlineStyles, classprefix: classPrefix, cssclass: wrappingDivClass, cssstyles: wrappingDivStyles, prestyles: preStyles,
-                    linenos: lineNumberStyle.ToString().Replace("none", ""), linenostart: lineNumberStart, nobackground: noBackground, lineseparator: lineBreaks, lineanchors: lineAnchorPrefix, linespans: lineSpanPrefix, anchorlinenos: anchorLineNumbers,
-                    hl_lines: highlightLines));
+            return _highlight(sourceCode, 
+                                GetLexer(lexerName, sourceCode, filename), 
+                                _formatters.get_formatter_by_name(  "html", 
+                                                                    style: GetStyleByName(styleName), 
+                                                                    full: !fragment, 
+                                                                    title: title, 
+                                                                    noclasses: generateInlineStyles, 
+                                                                    classprefix: classPrefix, 
+                                                                    cssclass: wrappingDivClass, 
+                                                                    cssstyles: wrappingDivStyles, 
+                                                                    prestyles: preStyles,                    
+                                                                    linenos: lineNumberStyle.ToString().Replace("none", ""), 
+                                                                    linenostart: lineNumberStart, 
+                                                                    nobackground: noBackground, 
+                                                                    lineseparator: lineBreaks, 
+                                                                    lineanchors: lineAnchorPrefix, 
+                                                                    linespans: lineSpanPrefix, 
+                                                                    anchorlinenos: anchorLineNumbers,
+                                                                    hl_lines: highlightLines)
+                            );
         }
 
         public string HighlightToLatex(string sourceCode, string lexerName = null, string styleName = null, string filename = null, bool fragment = false, string title = "", string documentClass = "article", bool lineNumbers = false, int lineNumberStart = 1,
