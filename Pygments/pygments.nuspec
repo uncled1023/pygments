@@ -4,10 +4,10 @@
         <id>Teknik.Pygments</id>
         <version>$version$</version>
         <title>.NET Pygments</title>
-        <authors>Uncled1023, fearthecowboy</authors>
+        <authors>Uncled1023</authors>
         <owners>Uncled1023</owners>
         <licenseUrl>https://bitbucket.org/birkenfeld/pygments-main/src/7304e4759ae65343d89a51359ca538912519cc31/LICENSE?at=default</licenseUrl>
-        <projectUrl>https://github.com/uncled1023/pygments</projectUrl>
+        <projectUrl>https://git.teknik.io/Uncled1023/dotnet-pygments</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>.NET Pygments is wrapper library created on top of pygments - a python library for syntax higlighting. The source is compiled using IronPython so that .Net developers can leverages the power of pygments</description>
         <summary>A single assembly .Net wrapper for Pygments Syntax Highlighter</summary>
