@@ -11,7 +11,7 @@
 //  limitations under the License.
 //  
 
-namespace FearTheCowboy.Pygments {
+namespace Teknik.Pygments {
     using System;
     using System.Collections;
     using System.Collections.Generic;

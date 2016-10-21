@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace Pyg {
     using System.Collections;
     using System.Collections.Generic;
-    using FearTheCowboy.Pygments;
+    using Teknik.Pygments;
 
     public static class Extensions {
         public static bool ContainsAny<T>(this IEnumerable<T> collection, params T[] items) {

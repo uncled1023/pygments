@@ -11,7 +11,7 @@
 //  limitations under the License.
 //  
 
-namespace FearTheCowboy.Pygments {
+namespace Teknik.Pygments {
     public enum LineNumberStyle {
         none,
         inline,

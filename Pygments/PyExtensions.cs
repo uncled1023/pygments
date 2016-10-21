@@ -11,7 +11,7 @@
 //  limitations under the License.
 //  
 
-namespace FearTheCowboy.Pygments {
+namespace Teknik.Pygments {
     using IronPython.Hosting;
     using Microsoft.Scripting.Hosting;
 
