@@ -7,8 +7,8 @@
     <ProjectGuid>{685B1F48-9279-4C2F-9D0B-FEEFA0A22B32}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FearTheCowboy.Pygments</RootNamespace>
-    <AssemblyName>FearTheCowboy.Pygments</AssemblyName>
+    <RootNamespace>Teknik.Pygments</RootNamespace>
+    <AssemblyName>Teknik.Pygments</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -238,6 +238,43 @@
     <None Include="pygments-lib\pygments\lexers\_stan_builtins.py" />
     <None Include="pygments-lib\pygments\lexers\_vim_builtins.py" />
     <None Include="pygments-lib\pygments\lexers\__init__.py" />
+    <None Include="pygments-lib\pygments\formatters\irc.py" />
+    <None Include="pygments-lib\pygments\lexers\ampl.py" />
+    <None Include="pygments-lib\pygments\lexers\archetype.py" />
+    <None Include="pygments-lib\pygments\lexers\bibtex.py" />
+    <None Include="pygments-lib\pygments\lexers\capnproto.py" />
+    <None Include="pygments-lib\pygments\lexers\clean.py" />
+    <None Include="pygments-lib\pygments\lexers\crystal.py" />
+    <None Include="pygments-lib\pygments\lexers\csound.py" />
+    <None Include="pygments-lib\pygments\lexers\elm.py" />
+    <None Include="pygments-lib\pygments\lexers\ezhil.py" />
+    <None Include="pygments-lib\pygments\lexers\forth.py" />
+    <None Include="pygments-lib\pygments\lexers\grammar_notation.py" />
+    <None Include="pygments-lib\pygments\lexers\hexdump.py" />
+    <None Include="pygments-lib\pygments\lexers\j.py" />
+    <None Include="pygments-lib\pygments\lexers\monte.py" />
+    <None Include="pygments-lib\pygments\lexers\ncl.py" />
+    <None Include="pygments-lib\pygments\lexers\oberon.py" />
+    <None Include="pygments-lib\pygments\lexers\parasail.py" />
+    <None Include="pygments-lib\pygments\lexers\praat.py" />
+    <None Include="pygments-lib\pygments\lexers\qvt.py" />
+    <None Include="pygments-lib\pygments\lexers\rnc.py" />
+    <None Include="pygments-lib\pygments\lexers\roboconf.py" />
+    <None Include="pygments-lib\pygments\lexers\sas.py" />
+    <None Include="pygments-lib\pygments\lexers\smv.py" />
+    <None Include="pygments-lib\pygments\lexers\stata.py" />
+    <None Include="pygments-lib\pygments\lexers\supercollider.py" />
+    <None Include="pygments-lib\pygments\lexers\trafficscript.py" />
+    <None Include="pygments-lib\pygments\lexers\typoscript.py" />
+    <None Include="pygments-lib\pygments\lexers\varnish.py" />
+    <None Include="pygments-lib\pygments\lexers\verification.py" />
+    <None Include="pygments-lib\pygments\lexers\whiley.py" />
+    <None Include="pygments-lib\pygments\lexers\x10.py" />
+    <None Include="pygments-lib\pygments\lexers\_csound_builtins.py" />
+    <None Include="pygments-lib\pygments\lexers\_stata_builtins.py" />
+    <None Include="pygments-lib\pygments\lexers\_tsql_builtins.py" />
+    <None Include="pygments-lib\pygments\styles\sas.py" />
+    <None Include="pygments-lib\pygments\styles\stata.py" />
     <None Include="pygments-lib\pygments\modeline.py" />
     <None Include="pygments-lib\pygments\plugin.py" />
     <None Include="pygments-lib\pygments\regexopt.py" />
@@ -278,7 +315,7 @@
     <None Include="pygments-lib\pygments\__init__.py" />
     <None Include="pygments-lib\test_compiled_pygments.py" />
     <None Include="pygments_helper.py">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -311,10 +348,6 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), solution.targets))\solution.targets" Condition="Exists('$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), solution.targets))\solution.targets')" />
   <ItemGroup>
     <PythonRuntime Include="$(SolutionDir)packages\IronPython.2.7.5\lib\net40\*" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="pygments-lib\pygments\styles\scite.py" />
-    <None Include="pygments-lib\pygments\styles\scitedark.py" />
   </ItemGroup>
   <Target Name="BeforeBuild" Inputs="@(None)" Outputs="$(SolutionDir)intermediate\pygments.dll">
     <MakeDir Directories="$(SolutionDir)intermediate" />
